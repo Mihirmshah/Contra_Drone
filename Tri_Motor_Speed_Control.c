@@ -1,5 +1,5 @@
 
-// Branch: Tri Motor Speed Control
+// Tri Motor Speed Control
 
 // See related posts -
 // http://rcarduino.blogspot.co.uk/2012/01/how-to-read-rc-receiver-with.html

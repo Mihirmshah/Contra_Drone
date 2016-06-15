@@ -160,7 +160,7 @@ void loop()
   // this allows us to only calculate new values when we have new inputs, rather than
   // on every cycle.
 
-  if(unSteeringIn < 1460) // Turning Left
+  if(unSteeringIn < 1460 && unThrottleIn > 1100) // Turning Left
   {
     difference = 1460 - unSteeringIn;
     if(unThrottleIn - difference >= 0)
@@ -173,7 +173,7 @@ void loop()
     }
   }
 
-  else if(unSteeringIn > 1500) // Turning Right
+  else if(unSteeringIn > 1500 && unThrottleIn > 1100) // Turning Right
   {
     difference = unSteeringIn - 1500;
     if(unThrottleIn + difference < 2000)
@@ -210,7 +210,7 @@ void loop()
   }
 
 // CW + Speed Control
-if(unPitchIn > 1490)
+if(unPitchIn > 1490 && unThrottleIn > 1100)
 {
   digitalWrite(DRIVER_IN_A, LOW);
   digitalWrite(DRIVER_IN_B, HIGH);
@@ -218,7 +218,7 @@ if(unPitchIn > 1490)
 }
 
 // CCW + Speed Control
-else if(unPitchIn < 1460)
+else if(unPitchIn < 1460 && unThrottleIn > 1100)
 {
   digitalWrite(DRIVER_IN_A, HIGH);
   digitalWrite(DRIVER_IN_B, LOW);

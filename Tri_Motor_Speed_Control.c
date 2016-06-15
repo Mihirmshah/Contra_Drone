@@ -1,7 +1,7 @@
 
 // Tri Motor Speed Control
 // Mihir Shah, Tenzing Rabgyal
-// This is a fifth test
+// This is a sixth test
 
 // See related posts -
 // http://rcarduino.blogspot.co.uk/2012/01/how-to-read-rc-receiver-with.html

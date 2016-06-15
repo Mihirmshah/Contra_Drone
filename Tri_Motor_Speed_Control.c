@@ -248,7 +248,7 @@ if(bUpdateFlag_Pitch)
 }
 
 
-// simple interrupt service routine
+//interrupt service routines
 
 void calcThrottle()
 {

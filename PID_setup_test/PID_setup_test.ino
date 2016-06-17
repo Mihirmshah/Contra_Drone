@@ -1,16 +1,27 @@
 
+//m1PID
 #define Kp_m1 //VALUE
-#define Kp_m2 //VALUE
-#define Kp_pitch //VALUE
 #define Ki_m1 //VALUE
-#define Ki_m2 //VALUE
-#define Ki_pitch //VALUE
 #define Kd_m1 //VALUE
-#define Kd_m2 //VALUE
-#define Kd_pitch //VALUE
 #define m1PID_direction //VALUE
+#define m1PID_MIN //VALUE
+#define m1PID_MAX //VALUE
+
+//m2PID
+#define Kp_m2 //VALUE
+#define Ki_m2 //VALUE
+#define Kd_m2 //VALUE
 #define m2PID_direction //VALUE
+#define m2PID_MIN //VALUE
+#define m2PID_MAX //VALUE
+
+//pitchPID
+#define Kp_pitch //VALUE
+#define Ki_pitch //VALUE
+#define Kd_pitch //VALUE
 #define pitchPID_direction //VALUE
+#define pitchPID_MIN //VALUE
+#define pitchPID_MAX //VALUE
 
 //PID variables
 double pid_m1_in, pid_m1_out, pid_m1_setpoint = 0;
@@ -36,12 +47,9 @@ void pid_initialize () {
   pitchPID.SetSampleTime(100);
 }
 
-void setup() {
-  // put your setup code here, to run once:
-
+void pid_compute() {
+  m1PID.Compute();
+  m2PID.Compute();
+  pitchPID.Compute();
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
